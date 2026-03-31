@@ -1,0 +1,11 @@
+Drug Name,Indication,Mechanism,Common Side Effects,Drug Class
+Metformin,Type 2 Diabetes,Decreases hepatic glucose production,Gastrointestinal upset; Lactic acidosis (rare),Biguanide
+Atorvastatin,Hyperlipidemia,Inhibits HMG-CoA reductase,Muscle pain; Liver enzyme elevation,Statin
+Levothyroxine,Hypothyroidism,Thyroid hormone replacement,Palpitations; Weight loss,Thyroid Hormone
+Omeprazole,GERD; Peptic ulcer,Proton pump inhibitor,Headache; Diarrhea,PPI
+Amlodipine,Hypertension,Calcium channel blocker,Peripheral edema; Flushing,CCB
+Losartan,Hypertension; Diabetic nephropathy,Angiotensin II receptor blocker,Dizziness; Hyperkalemia,ARB
+Albuterol,Asthma; COPD,Beta-2 agonist bronchodilator,Tremor; Tachycardia,SABA
+Gabapentin,Neuropathic pain; Seizures,Modulates calcium channels,Dizziness; Somnolence,Anticonvulsant
+Sertraline,Depression; Anxiety,Selective serotonin reuptake inhibitor,Nausea; Sexual dysfunction,SSRI
+Warfarin,Anticoagulation,Vitamin K antagonist,Bleeding; Bruising,Anticoagulant

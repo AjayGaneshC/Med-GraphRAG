@@ -1,0 +1,41 @@
+{
+  "drug": {
+    "name": "Lisinopril",
+    "type": "ACE Inhibitor",
+    "indication": "Treatment of hypertension and heart failure",
+    "mechanism": "Inhibits angiotensin-converting enzyme (ACE), reducing production of angiotensin II",
+    "common_doses": ["5mg", "10mg", "20mg", "40mg"],
+    "side_effects": [
+      "Dry cough",
+      "Dizziness",
+      "Hypotension",
+      "Hyperkalemia",
+      "Angioedema (rare)"
+    ],
+    "contraindications": [
+      "Pregnancy",
+      "History of angioedema",
+      "Bilateral renal artery stenosis"
+    ],
+    "drug_interactions": [
+      {
+        "drug": "Potassium supplements",
+        "effect": "Increased risk of hyperkalemia"
+      },
+      {
+        "drug": "NSAIDs",
+        "effect": "Reduced antihypertensive effect"
+      },
+      {
+        "drug": "Lithium",
+        "effect": "Increased lithium levels"
+      }
+    ],
+    "monitoring": [
+      "Blood pressure",
+      "Serum creatinine",
+      "Potassium levels",
+      "Renal function"
+    ]
+  }
+}

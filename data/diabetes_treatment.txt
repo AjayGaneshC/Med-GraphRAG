@@ -1,0 +1,108 @@
+# Type 2 Diabetes: Diagnosis and Treatment
+
+## Overview
+
+Type 2 diabetes mellitus is a chronic metabolic disorder characterized by hyperglycemia resulting from insulin resistance and relative insulin deficiency. It affects millions of people worldwide and is a leading cause of cardiovascular disease, kidney failure, blindness, and lower limb amputation.
+
+## Pathophysiology
+
+Type 2 diabetes develops when the pancreatic beta cells cannot produce sufficient insulin to overcome insulin resistance in peripheral tissues. The liver, skeletal muscle, and adipose tissue are primary sites of insulin resistance. Elevated blood glucose levels cause damage to blood vessels and nerves throughout the body.
+
+The GLP-1 receptor plays a crucial role in glucose homeostasis by stimulating insulin secretion in response to oral glucose intake. Defects in this incretin pathway contribute to the pathogenesis of type 2 diabetes.
+
+## Risk Factors
+
+Major risk factors for type 2 diabetes include:
+- Obesity (BMI > 30 kg/m²)
+- Family history of diabetes
+- Physical inactivity
+- Age over 45 years
+- History of gestational diabetes
+- Polycystic ovary syndrome (PCOS)
+- Hypertension (blood pressure > 140/90 mmHg)
+- Dyslipidemia (elevated triglycerides, low HDL cholesterol)
+
+## Diagnosis
+
+Diagnosis of type 2 diabetes is based on one of the following criteria:
+1. Fasting plasma glucose (FPG) ≥ 126 mg/dL (7.0 mmol/L)
+2. 2-hour plasma glucose ≥ 200 mg/dL (11.1 mmol/L) during oral glucose tolerance test (OGTT)
+3. Hemoglobin A1c (HbA1c) ≥ 6.5%
+4. Random plasma glucose ≥ 200 mg/dL with classic symptoms of hyperglycemia
+
+HbA1c is a biomarker that reflects average blood glucose levels over the preceding 2-3 months. It is formed by the non-enzymatic glycation of hemoglobin.
+
+## Pharmacological Treatment
+
+### First-Line Therapy
+
+Metformin is the recommended first-line pharmacological agent for type 2 diabetes. It works by decreasing hepatic glucose production, reducing intestinal glucose absorption, and improving insulin sensitivity. Metformin does not cause weight gain and has cardiovascular benefits. Common side effects include gastrointestinal disturbances.
+
+The starting dose is typically 500 mg twice daily, titrated up to 2000 mg daily as tolerated. Metformin is contraindicated in patients with severe renal impairment (eGFR < 30 mL/min).
+
+### Second-Line Therapies
+
+When glycemic targets are not achieved with metformin alone, additional agents may be added:
+
+**SGLT2 Inhibitors** (Sodium-glucose cotransporter 2 inhibitors):
+- Empagliflozin, dapagliflozin, canagliflozin
+- Mechanism: Block glucose reabsorption in the kidneys
+- Benefits: Weight loss, blood pressure reduction, cardiovascular and renal protection
+- Side effects: Genital mycotic infections, diabetic ketoacidosis risk
+
+**GLP-1 Receptor Agonists**:
+- Semaglutide, liraglutide, dulaglutide, exenatide
+- Mechanism: Enhance glucose-dependent insulin secretion, reduce glucagon secretion
+- Benefits: Significant weight loss, cardiovascular risk reduction
+- Side effects: Nausea, vomiting, pancreatitis risk
+
+**DPP-4 Inhibitors** (Dipeptidyl peptidase-4 inhibitors):
+- Sitagliptin, saxagliptin, linagliptin
+- Mechanism: Prevent degradation of endogenous GLP-1
+- Benefits: Weight neutral, well tolerated
+- Side effects: Upper respiratory infections, headache
+
+**Sulfonylureas**:
+- Glimepiride, glipizide, glyburide
+- Mechanism: Stimulate insulin secretion from pancreatic beta cells
+- Benefits: Rapid onset of action, inexpensive
+- Side effects: Hypoglycemia, weight gain
+
+**Thiazolidinediones** (TZDs):
+- Pioglitazone
+- Mechanism: PPAR-gamma agonist, improves insulin sensitivity
+- Benefits: Durable glycemic control
+- Side effects: Weight gain, edema, heart failure risk, bone fractures
+
+### Insulin Therapy
+
+Insulin therapy is indicated when oral agents fail to achieve glycemic control or at diagnosis with severe hyperglycemia. Options include:
+- Basal insulin (glargine, detemir, degludec)
+- Prandial insulin (lispro, aspart, glulisine)
+- Premixed insulin formulations
+
+## Monitoring
+
+Regular monitoring is essential:
+- HbA1c every 3 months until stable, then every 6 months
+- Self-monitoring of blood glucose (SMBG)
+- Annual screening for complications:
+  - Dilated eye exam for diabetic retinopathy
+  - Urine albumin-to-creatinine ratio for diabetic nephropathy
+  - Foot examination for peripheral neuropathy
+
+## Complications
+
+### Macrovascular Complications
+- Coronary artery disease
+- Cerebrovascular disease (stroke)
+- Peripheral arterial disease
+
+### Microvascular Complications
+- Diabetic retinopathy: Leading cause of blindness in working-age adults
+- Diabetic nephropathy: Leading cause of end-stage renal disease
+- Diabetic neuropathy: Peripheral sensory neuropathy and autonomic neuropathy
+
+## Conclusion
+
+Type 2 diabetes requires a comprehensive management approach including lifestyle modifications, pharmacotherapy, and regular monitoring. Early intervention and tight glycemic control can prevent or delay the onset of complications.

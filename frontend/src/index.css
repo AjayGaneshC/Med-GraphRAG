@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  @apply bg-gradient-to-br from-gray-900 via-red-950 to-gray-900;
+}
+
+/* Custom scrollbar with cardiovascular theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cardio-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cardio-accent;
+}
+
+/* Heartbeat animation for icons */
+.heart-icon {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+/* Blood flow effect */
+.blood-flow {
+  background: linear-gradient(90deg, #dc2626 0%, #ef4444 50%, #dc2626 100%);
+  background-size: 200% 100%;
+  animation: flow 3s linear infinite;
+}
+
+/* Pulse effect for status indicators */
+.pulse-indicator {
+  box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* Card styles */
+.cardio-card {
+  @apply bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-lg border border-cardio-primary shadow-lg hover:shadow-cardio-primary/50 transition-all duration-300;
+}
+
+/* Button styles */
+.btn-cardio {
+  @apply bg-cardio-gradient text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:shadow-cardio-primary/50 transition-all duration-300 hover:scale-105;
+}
+
+.btn-outline-cardio {
+  @apply border-2 border-cardio-primary text-cardio-accent font-semibold py-2 px-6 rounded-lg hover:bg-cardio-primary hover:text-white transition-all duration-300;
+}

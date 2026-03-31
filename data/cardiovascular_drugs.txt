@@ -1,0 +1,139 @@
+# Cardiovascular Disease and Drug Interactions
+
+## Hypertension Treatment
+
+Hypertension, or high blood pressure, is defined as systolic blood pressure ≥130 mmHg or diastolic blood pressure ≥80 mmHg. It is a major risk factor for cardiovascular disease, stroke, and kidney disease.
+
+### First-Line Antihypertensive Agents
+
+**ACE Inhibitors** (Angiotensin-Converting Enzyme Inhibitors):
+- Lisinopril, enalapril, ramipril
+- Mechanism: Block conversion of angiotensin I to angiotensin II
+- Side effects: Dry cough, angioedema, hyperkalemia
+- Contraindicated in pregnancy
+
+**ARBs** (Angiotensin II Receptor Blockers):
+- Losartan, valsartan, irbesartan
+- Mechanism: Block angiotensin II receptors
+- Benefits: Similar efficacy to ACE inhibitors without cough
+- Side effects: Hyperkalemia, hypotension
+
+**Calcium Channel Blockers**:
+- Amlodipine, nifedipine (dihydropyridines)
+- Diltiazem, verapamil (non-dihydropyridines)
+- Mechanism: Block L-type calcium channels in vascular smooth muscle
+- Side effects: Peripheral edema (dihydropyridines), bradycardia (non-dihydropyridines)
+
+**Thiazide Diuretics**:
+- Hydrochlorothiazide, chlorthalidone
+- Mechanism: Inhibit sodium reabsorption in distal convoluted tubule
+- Side effects: Hypokalemia, hyperuricemia, hyperglycemia
+
+## Heart Failure Management
+
+Heart failure is a clinical syndrome caused by structural or functional cardiac abnormalities resulting in reduced cardiac output. Treatment depends on ejection fraction.
+
+### Heart Failure with Reduced Ejection Fraction (HFrEF)
+
+Guideline-directed medical therapy includes:
+
+1. **ACE Inhibitors or ARBs**: Reduce mortality and hospitalization
+   - Lisinopril, enalapril for ACE inhibitors
+   - Valsartan, losartan for ARBs
+
+2. **Beta-Blockers**: Reduce mortality in stable HFrEF
+   - Carvedilol, metoprolol succinate, bisoprolol
+   - Mechanism: Block beta-adrenergic receptors, reduce heart rate and myocardial oxygen demand
+   - Must be started at low doses and titrated slowly
+
+3. **ARNI** (Angiotensin Receptor-Neprilysin Inhibitor):
+   - Sacubitril/valsartan (Entresto)
+   - Superior to ACE inhibitors for reducing mortality
+   - Should not be used with ACE inhibitors (36-hour washout required)
+
+4. **Mineralocorticoid Receptor Antagonists**:
+   - Spironolactone, eplerenone
+   - Reduce mortality when added to ACE inhibitor and beta-blocker
+   - Monitor for hyperkalemia
+
+5. **SGLT2 Inhibitors**:
+   - Dapagliflozin, empagliflozin
+   - Reduce hospitalization and mortality regardless of diabetes status
+   - Mechanism: Promote natriuresis and osmotic diuresis
+
+6. **Diuretics**: For symptom relief and fluid management
+   - Furosemide (loop diuretic) is most commonly used
+   - Does not improve mortality
+
+## Anticoagulation for Atrial Fibrillation
+
+Atrial fibrillation increases stroke risk 5-fold. Anticoagulation decisions are based on CHA2DS2-VASc score.
+
+### Direct Oral Anticoagulants (DOACs)
+
+DOACs are preferred over warfarin for most patients:
+
+**Factor Xa Inhibitors**:
+- Rivaroxaban: Once daily dosing, take with food
+- Apixaban: Twice daily, lowest bleeding risk
+- Edoxaban: Once daily, requires prior heparin
+
+**Direct Thrombin Inhibitors**:
+- Dabigatran: Twice daily, requires renal dose adjustment
+- Has reversal agent (idarucizumab)
+
+### Warfarin
+
+- Vitamin K antagonist
+- Requires INR monitoring (target 2.0-3.0)
+- Multiple drug and food interactions
+- CYP2C9 and VKORC1 genetic variants affect dosing
+
+## Critical Drug Interactions
+
+### Cardiovascular Drug Interactions
+
+1. **ACE inhibitors + Potassium supplements**: Risk of hyperkalemia
+2. **ACE inhibitors + NSAIDs**: Reduced antihypertensive effect, acute kidney injury
+3. **Beta-blockers + Verapamil/Diltiazem**: Severe bradycardia, heart block
+4. **Digoxin + Amiodarone**: Increased digoxin levels (reduce digoxin dose by 50%)
+5. **Statins + Fibrates**: Increased myopathy risk (especially gemfibrozil)
+6. **Warfarin + Antibiotics**: Altered INR (especially fluoroquinolones, metronidazole)
+
+### QT Prolongation Risk
+
+Multiple drugs can prolong the QT interval and cause torsades de pointes:
+- Amiodarone, sotalol, dofetilide (antiarrhythmics)
+- Haloperidol, ziprasidone (antipsychotics)
+- Fluoroquinolones, macrolides (antibiotics)
+- Ondansetron (antiemetic)
+
+Combined use of QT-prolonging drugs significantly increases arrhythmia risk.
+
+## Lipid Management
+
+Statins are the cornerstone of lipid-lowering therapy for cardiovascular risk reduction:
+
+**High-Intensity Statins** (LDL reduction ≥50%):
+- Atorvastatin 40-80 mg
+- Rosuvastatin 20-40 mg
+
+**Moderate-Intensity Statins** (LDL reduction 30-49%):
+- Atorvastatin 10-20 mg
+- Rosuvastatin 5-10 mg
+- Simvastatin 20-40 mg
+
+**Statin Intolerance**: Alternative therapies include:
+- Ezetimibe: Inhibits intestinal cholesterol absorption
+- PCSK9 inhibitors (evolocumab, alirocumab): Monoclonal antibodies, very effective but expensive
+- Bempedoic acid: ATP citrate lyase inhibitor, can be used in statin-intolerant patients
+
+### Statin Drug Interactions
+
+Statins metabolized by CYP3A4 (atorvastatin, simvastatin, lovastatin) have significant interactions:
+- Grapefruit juice: Increases statin levels
+- Clarithromycin, erythromycin: Increase statin levels
+- Cyclosporine: Dramatically increases statin levels
+- Diltiazem, verapamil: Moderate increase in statin levels
+
+Rosuvastatin and pravastatin have fewer drug interactions due to limited CYP metabolism.

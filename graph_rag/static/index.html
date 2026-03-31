@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Graph RAG - Knowledge Graph System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/dist/vis-network.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">🏥</div>
+            <h1>Medical Graph RAG</h1>
+            <p>Knowledge Graph System</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <span class="icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-page="query">
+                <span class="icon">🔍</span>
+                <span>Query</span>
+            </a>
+            <a href="#" class="nav-item" data-page="ingest">
+                <span class="icon">📥</span>
+                <span>Ingest</span>
+            </a>
+            <a href="#" class="nav-item" data-page="graph">
+                <span class="icon">🕸️</span>
+                <span>Explorer</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <span class="icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-stats">
+            <h3>Quick Stats</h3>
+            <div class="stat-row">
+                <div class="stat-item">
+                    <div class="stat-label">Entities</div>
+                    <div class="stat-value" id="sidebar-entities">-</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Relations</div>
+                    <div class="stat-value" id="sidebar-relations">-</div>
+                </div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-item">
+                    <div class="stat-label">Documents</div>
+                    <div class="stat-value" id="sidebar-docs">-</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Chunks</div>
+                    <div class="stat-value" id="sidebar-chunks">-</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-status">
+            <h3>System Status</h3>
+            <div class="status-item">
+                <span class="status-indicator" id="neo4j-status"></span>
+                <span>Neo4j</span>
+            </div>
+            <div class="status-item">
+                <span class="status-indicator" id="ollama-status"></span>
+                <span>Ollama</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Page -->
+        <div class="page active" id="dashboard-page">
+            <header class="page-header">
+                <h1>🏠 Dashboard</h1>
+                <p>Overview of your Medical Knowledge Graph</p>
+            </header>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📄</div>
+                    <div class="metric-value" id="metric-docs">-</div>
+                    <div class="metric-label">Documents</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📝</div>
+                    <div class="metric-value" id="metric-chunks">-</div>
+                    <div class="metric-label">Chunks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🏷️</div>
+                    <div class="metric-value" id="metric-occurrences">-</div>
+                    <div class="metric-label">Mentions</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🔬</div>
+                    <div class="metric-value" id="metric-entities">-</div>
+                    <div class="metric-label">Entities</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🔗</div>
+                    <div class="metric-value" id="metric-relations">-</div>
+                    <div class="metric-label">Relations</div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h2>📊 Entities by Type</h2>
+                    <div id="entity-chart"></div>
+                </div>
+                <div class="card">
+                    <h2>🔝 Top Entities</h2>
+                    <div id="top-entities"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Query Page -->
+        <div class="page" id="query-page">
+            <header class="page-header">
+                <h1>🔍 Query Knowledge Graph</h1>
+                <p>Ask questions about your medical knowledge base</p>
+            </header>
+            
+            <div class="query-container">
+                <div class="search-box">
+                    <textarea id="query-input" placeholder="Enter your question...&#10;&#10;Example: What are the treatments for type 2 diabetes?"></textarea>
+                    <div class="search-controls">
+                        <label>
+                            <input type="checkbox" id="show-graph" checked>
+                            Show Graph
+                        </label>
+                        <label>
+                            <input type="checkbox" id="show-sources" checked>
+                            Show Sources
+                        </label>
+                        <button id="search-btn" class="btn btn-primary">
+                            <span class="icon">🔎</span>
+                            Search
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="search-results"></div>
+            </div>
+        </div>
+        
+        <!-- Ingest Page -->
+        <div class="page" id="ingest-page">
+            <header class="page-header">
+                <h1>📥 Ingest Documents</h1>
+                <p>Add medical documents to your knowledge graph</p>
+            </header>
+            
+            <div class="tabs">
+                <button class="tab active" data-tab="upload">📁 Upload Files</button>
+                <button class="tab" data-tab="paste">✍️ Paste Text</button>
+            </div>
+            
+            <div class="tab-content active" id="upload-tab">
+                <div class="upload-zone" id="upload-zone">
+                    <div class="upload-icon">📁</div>
+                    <h3>Drag & drop files here</h3>
+                    <p>or click to browse</p>
+                    <p class="upload-formats">Supported: PDF, Word, HTML, CSV, JSON, XML, RTF, Markdown, Text</p>
+                    <input type="file" id="file-input" multiple accept=".txt,.md,.pdf,.docx,.doc,.html,.htm,.csv,.json,.xml,.rtf">
+                </div>
+                <div id="file-list"></div>
+                <button id="upload-btn" class="btn btn-primary" style="display:none;">
+                    📥 Start Ingestion
+                </button>
+                <div id="upload-progress"></div>
+            </div>
+            
+            <div class="tab-content" id="paste-tab">
+                <div class="form-group">
+                    <label for="doc-title">Document Title</label>
+                    <input type="text" id="doc-title" placeholder="Enter a title for this document">
+                </div>
+                <div class="form-group">
+                    <label for="doc-content">Document Content</label>
+                    <textarea id="doc-content" rows="15" placeholder="Paste your medical text here...&#10;&#10;Example: Metformin is the first-line treatment for type 2 diabetes..."></textarea>
+                </div>
+                <button id="paste-ingest-btn" class="btn btn-primary">
+                    📥 Ingest Text
+                </button>
+                <div id="paste-result"></div>
+            </div>
+        </div>
+        
+        <!-- Graph Explorer Page -->
+        <div class="page" id="graph-page">
+            <header class="page-header">
+                <h1>🕸️ Graph Explorer</h1>
+                <p>Explore and visualize your knowledge graph</p>
+            </header>
+            
+            <div class="explorer-container">
+                <div class="explorer-sidebar">
+                    <h3>Filter Entities</h3>
+                    <select id="entity-type-filter">
+                        <option value="ALL">All Types</option>
+                        <option value="DRUG">Drug</option>
+                        <option value="DISEASE">Disease</option>
+                        <option value="SYMPTOM">Symptom</option>
+                        <option value="GENE">Gene</option>
+                        <option value="PROTEIN">Protein</option>
+                        <option value="ANATOMY">Anatomy</option>
+                        <option value="PROCEDURE">Procedure</option>
+                        <option value="CHEMICAL">Chemical</option>
+                        <option value="BIOMARKER">Biomarker</option>
+                        <option value="ORGANISM">Organism</option>
+                    </select>
+                    
+                    <input type="text" id="entity-search" placeholder="Search entities...">
+                    
+                    <div id="entity-list"></div>
+                </div>
+                
+                <div class="explorer-main">
+                    <h3>Entity Neighborhood</h3>
+                    <div id="graph-viz"></div>
+                    <div id="graph-info"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Settings Page -->
+        <div class="page" id="settings-page">
+            <header class="page-header">
+                <h1>⚙️ Settings</h1>
+                <p>Configure your Graph RAG system</p>
+            </header>
+            
+            <div class="settings-grid">
+                <div class="card">
+                    <h2>🗄️ Database Configuration</h2>
+                    <div class="info-item">
+                        <span class="info-label">Neo4j URI:</span>
+                        <span class="info-value">bolt://localhost:7687</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Neo4j User:</span>
+                        <span class="info-value">neo4j</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>🤖 LLM Configuration</h2>
+                    <div class="info-item">
+                        <span class="info-label">Ollama URL:</span>
+                        <span class="info-value">http://localhost:11434</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Model:</span>
+                        <span class="info-value">llama3:latest</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Embedding Model:</span>
+                        <span class="info-value">all-MiniLM-L6-v2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>🛠️ Database Actions</h2>
+                <div class="button-group">
+                    <button id="init-schema-btn" class="btn btn-secondary">
+                        🔧 Initialize Schema
+                    </button>
+                    <button id="refresh-stats-btn" class="btn btn-secondary">
+                        📊 Refresh Stats
+                    </button>
+                    <button id="clear-db-btn" class="btn btn-danger">
+                        🗑️ Clear Database
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>ℹ️ About</h2>
+                <p><strong>Medical Graph RAG v0.2.0</strong></p>
+                <p>A hierarchical knowledge graph system for medical domain using:</p>
+                <ul>
+                    <li><strong>Neo4j</strong> for graph storage</li>
+                    <li><strong>Ollama</strong> for LLM-based extraction</li>
+                    <li><strong>Sentence Transformers</strong> for embeddings</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
