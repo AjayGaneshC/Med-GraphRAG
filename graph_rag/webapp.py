@@ -8,6 +8,14 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any
 import html
 
+import sys
+
+# Add project root to sys.path so 'graph_rag' module can be found
+current_dir = Path(__file__).resolve().parent
+project_root = current_dir.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 import streamlit as st
 from streamlit_agraph import agraph, Node, Edge, Config
 
